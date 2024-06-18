@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingua VR Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Lingua VR Logo">
+            <h2>Lingua VR Prototype V1.0</h2>
+        </div>
+        <div class="recording-controls">
+            <button id="startRecording">Start Recording</button>
+            <button id="stopRecording" disabled>Stop Recording</button>
+        </div>
+        <div class="results">
+            <p id="transcription"></p>
+            <p id="translation"></p>
+            <audio id="audio" controls></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
