@@ -15,38 +15,55 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
     margin: 2rem;
 }
 
 .header {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.header img {
+.header h1 {
+    font-size: 22px;
+}
+
+.logo {
     width: 60px;
     margin-right: 10px;
 }
 
-h1 {
-    margin: 0;
+.avatar {
+    margin-bottom: 20px;
 }
 
-.recording-controls {
-    display: flex;
-    justify-content: center;
+.avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.controls {
     margin-bottom: 20px;
 }
 
 button {
     padding: 10px 20px;
-    margin: 0 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+button.recording {
+    background-color: #dc3545;
 }
 
 button:disabled {
@@ -54,16 +71,47 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.results {
-    text-align: center;
-    margin-bottom: 20px;
+.mic-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
 }
 
-p {
-    margin: 10px 0;
-}
-
-#audio {
-    width: 100%;
+.recording-indicator {
+    display: none;
     margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.recording-indicator .wave {
+    width: 5px;
+    height: 20px;
+    background-color: #dc3545;
+    margin: 0 3px;
+    display: inline-block;
+    animation: wave 1.2s linear infinite;
+}
+
+.recording-indicator span {
+    margin-left: 10px;
+    color: #dc3545;
+}
+
+@keyframes wave {
+    0%, 40%, 100% {
+        transform: scaleY(0.3);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+.text-display {
+    margin-top: 20px;
+}
+
+#spokenText {
+    font-size: 16px;
+    color: #333;
 }

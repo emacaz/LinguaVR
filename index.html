@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lingua VR Prototype</title>
+    <title>LinguaVR Prototype</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="logo.png" alt="Lingua VR Logo">
-            <h2>Lingua VR Prototype V1.0</h2>
+            <img src="/images/logo.png" alt="Lingua VR Logo" class="logo">
+            <h1>Lingua VR Prototype V1.0</h1>
         </div>
-        <div class="recording-controls">
-            <button id="startRecording">Start Recording</button>
-            <button id="stopRecording" disabled>Stop Recording</button>
+        <div class="avatar">
+            <p><i>Habla conmigo...</i></p>
+            <img src="images/3d_avatar.avif" alt="Avatar" class="avatar-img">
         </div>
-        <div class="results">
-            <p id="transcription"></p>
-            <p id="translation"></p>
-            <audio id="audio" controls></audio>
+        <div class="controls">
+            <p><i>Clic en "Grabar" y habla en español...</i></p>
+            <button id="recordButton">
+                <span id="buttonText">Grabar</span>
+                <img src="images/microphone.svg" alt="Mic Icon" class="mic-icon">
+            </button>
+            <div id="recordingIndicator" class="recording-indicator">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <span>Grabando...</span>
+            </div>
+        </div>
+        <div class="text-display">
+            <p id="spokenText">Aquí se mostrará el texto en inglés...</p>
         </div>
     </div>
 
