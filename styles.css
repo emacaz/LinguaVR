@@ -132,7 +132,9 @@ header {
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
+  background-color: #ccc; /* Cambia el color de fondo */
+  cursor: not-allowed; 
 }
 
 /* Footer */
