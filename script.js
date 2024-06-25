@@ -54,3 +54,65 @@ document.addEventListener("DOMContentLoaded", function() {
     h1.innerHTML = ""; // Limpiar el contenido antes de comenzar a escribir
     typeWriter();
 });
+
+
+function recaptchaCallback(token) {
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = false;
+  submitBtn.style.cursor = 'pointer';
+  submitBtn.style.backgroundColor = '#1e3745';
+  // Opcional: Puedes enviar el formulario automáticamente si lo deseas
+  // document.getElementById("myForm").submit();
+}
+
+document.getElementById("form_id").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita el envío del formulario para fines de demostración
+    // Aquí puedes agregar el código para enviar el formulario a tu servidor
+    // Si el envío del formulario es exitoso, muestra el mensaje de confirmación
+    const email = document.querySelector("input[name='email']").value.toLowerCase().replace(/\s/g, '');
+    console.log(email);
+    console.log("Correo enviado...");
+    document.getElementById("confirmationModal").style.display = "block";
+    document.querySelector("input[name='email']").value = ""; // Limpiar el campo de correo
+    grecaptcha.reset(); // Reiniciar reCAPTCHA
+    
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.style.cursor = 'not-allowed';
+    submitBtn.style.backgroundColor = '#ccc';
+});
+
+document.getElementById("closeModal").onclick = function() {
+    document.getElementById("confirmationModal").style.display = "none";
+};
+
+document.getElementById("acceptBtn").onclick = function() {
+    document.getElementById("confirmationModal").style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById("confirmationModal")) {
+        document.getElementById("confirmationModal").style.display = "none";
+    }
+};
+
+// document.getElementById('form_id').addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     const email = event.target.email.value;
+//     const recaptchaResponse = grecaptcha.getResponse();
+    
+//     fetch('https://baodlvjrsd.execute-api.sa-east-1.amazonaws.com/test', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({ email: email, recaptchaResponse: recaptchaResponse }),
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         alert(data.message);
+//     })
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
+// }); 

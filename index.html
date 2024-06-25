@@ -68,7 +68,7 @@
         Regístrate gratis para ser de los primeros en probar LinguaVR:
       </p>
 
-      <form action="" method="POST">
+      <form action="" method="POST" id="form_id">
         <input type="email" name="email" placeholder="Tu correo" required />
         <div
           class="g-recaptcha"
@@ -81,15 +81,18 @@
         <button type="submit" id="submitBtn" disabled>Enviar</button>
       </form>
 
+      <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p>Te enviamos un correo de confirmación</p>
+            <p>Recuerda revisar spam y no deseados</p>
+            <button id="acceptBtn">Aceptar</button>
+        </div>
+      </div>
+
       <script>
-        function recaptchaCallback(token) {
-          const submitBtn = document.getElementById('submitBtn');
-          submitBtn.disabled = false;
-          submitBtn.style.cursor = 'pointer';
-          submitBtn.style.backgroundColor = '#1e3745';
-          // Opcional: Puedes enviar el formulario automáticamente si lo deseas
-          // document.getElementById("myForm").submit();
-        }
+        
+
       </script>
 
     </section>
