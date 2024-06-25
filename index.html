@@ -7,83 +7,99 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <meta property="og:title" content="LinguaVR - El Futuro del Aprendizaje Personalizado">
-    <meta property="og:description" content="Sumérgete en un entorno de aprendizaje de inglés sin salir de casa con LinguaVR.">
-    <meta property="og:image" content="https://www.lingua-vr.com/images/og_image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://www.lingua-vr.com">
-    <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="LinguaVR - El Futuro del Aprendizaje Personalizado"
+    />
+    <meta
+      property="og:description"
+      content="Sumérgete en un entorno de aprendizaje de inglés sin salir de casa con LinguaVR."
+    />
+    <meta
+      property="og:image"
+      content="https://www.lingua-vr.com/images/og_image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.lingua-vr.com" />
+    <meta property="og:type" content="website" />
+    <script
+      src="https://www.google.com/recaptcha/api.js" async defer ></script>
   </head>
+
   <body>
-    <body>
-      <header>
-        <div class="logo">
-          <img src="images/header-logo.png" alt="Logo de LinguaVR" />
-        </div>
-      </header>
+    <header>
+      <div class="logo">
+        <img src="images/header-logo.png" alt="Logo de LinguaVR" />
+      </div>
+    </header>
 
-      <section class="hero">
-        <div class="hero-title">
-          <h1 id="hero_title_id">
-            El Futuro del <br />
-            Aprendizaje Personalizado
-          </h1>
-          <div class="video">
-            <iframe
-              src="https://www.youtube.com/embed/kxa9xAnMpZc"
-              title="Presentación LinguaVR - El Futuro del aprendizaje personalizado"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+    <section class="hero">
+      <div class="hero-title">
+        <h1 id="hero_title_id">
+          El Futuro del <br />
+          Aprendizaje Personalizado
+        </h1>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/kxa9xAnMpZc"
+            title="Presentación LinguaVR - El Futuro del aprendizaje personalizado"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
-        <h2>¿Por qué LinguaVR?</h2>
-        <p class="hero-description">
-          Contigo resolvemos el acceso limitado a la inmersión en inglés, con un
-          aprendizaje inmersivo desde casa mediante realidad virtual e
-          Inteligencia Artificial.
+      </div>
+      <h2>¿Por qué LinguaVR?</h2>
+      <p class="hero-description">
+        Contigo resolvemos el acceso limitado a la inmersión en inglés, con un
+        aprendizaje inmersivo desde casa mediante realidad virtual e
+        Inteligencia Artificial.
+      </p>
+      <div class="scroll-down">
+        <a href="#form"
+          ><img src="images/down-arrow.png" alt="Flecha hacia abajo"
+        /></a>
+      </div>
+    </section>
+
+    <section id="form" class="form">
+      <p class="form-description">
+        Regístrate gratis para ser de los primeros en probar LinguaVR:
+      </p>
+      <form action="" method="POST">
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <div
+          class="g-recaptcha"
+          data-sitekey="6Ld35QAqAAAAAKzaXIXCf3s3me_btgbUNZFSi1qx"
+          data-callback="recaptchaCallback"
+        ></div>
+        <p class="form-text">
+          * Al registrarte aceptas recibir correos de LinguaVR.
         </p>
-        <div class="scroll-down">
-          <a href="#form"
-            ><img src="images/down-arrow.png" alt="Flecha hacia abajo"
-          /></a>
-        </div>
-      </section>
+        <button type="submit" id="submitBtn">Enviar</button>
+      </form>
 
-      <section id="form" class="form">
-        <p class="form-description">
-          Regístrate gratis para ser de los primeros en probar LinguaVR:
-        </p>
-        <form action="" method="POST">
-          <input type="email" name="email" placeholder="Tu correo" required />
-          <p class="form-text">
-            * Al registrarte aceptas recibir correos de LinguaVR.
-          </p>
-          <button type="submit" disabled>Enviar</button>
-        </form>
-      </section>
+    </section>
 
-      <footer>
-        <div class="footer-left">
-          <img src="images/footer-brain-img.png" alt="Lingua Brain" />
-          <img src="images/footer-name.png" alt="LinguaVR" />
-        </div>
-        <div class="footer-right">
-          <a href="https://www.linkedin.com/company/linguavr/" target="_blank"
-            ><img src="images/in-icon.png" alt="LinkedIn"
-          /></a>
-          <a href="https://www.instagram.com/lingua_vr/" target="_blank"
-            ><img src="images/instgram-icon.png" alt="Instagram"
-          /></a>
-          <a href="https://x.com/linguavr/" target="_blank"
-            ><img src="images/x-icon.png" alt="X"
-          /></a>
-        </div>
-      </footer>
-      <script src="script.js"></script>
-    </body>
+    <footer>
+      <div class="footer-left">
+        <img src="images/footer-brain-img.png" alt="Lingua Brain" />
+        <img src="images/footer-name.png" alt="LinguaVR" />
+      </div>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/company/linguavr/" target="_blank"
+          ><img src="images/in-icon.png" alt="LinkedIn"
+        /></a>
+        <a href="https://www.instagram.com/lingua_vr/" target="_blank"
+          ><img src="images/instgram-icon.png" alt="Instagram"
+        /></a>
+        <a href="https://x.com/linguavr/" target="_blank"
+          ><img src="images/x-icon.png" alt="X"
+        /></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
