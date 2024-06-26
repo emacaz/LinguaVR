@@ -46,29 +46,34 @@ document.getElementById("form_id").addEventListener("submit", function(event) {
     const API = 'https://5zgbdl1m7g.execute-api.sa-east-1.amazonaws.com/save_email';
     
     const email = document.querySelector("input[name='email']").value.toLowerCase().replace(/\s/g, '');
+    const token = grecaptcha.getResponse();
     const submitBtn = document.getElementById('submitBtn');
     const responseMessage = document.getElementById("responseMessage");
     
+    console.log(token);
     submitBtn.textContent = "Enviando...";
+    document.querySelector("input[name='email']").disabled = true;
+
     submitBtn.disabled = true;
     submitBtn.style.cursor = 'not-allowed';
     submitBtn.style.backgroundColor = '#ccc';
-
-    document.querySelector("input[name='email']").value = "";
-    grecaptcha.reset();
 
     fetch(API, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email: email, token: grecaptcha.getResponse() })
+      body: JSON.stringify({ email: email, token: token })
     })
     .then(response => response.json())
     .then(data => {
+      console.log(data);
       responseMessage.textContent = data.body;
       document.getElementById("confirmationModal").style.display = "block";
       submitBtn.textContent = "Enviar";
+      document.querySelector("input[name='email']").value = "";
+      document.querySelector("input[name='email']").disabled = false;
+      grecaptcha.reset();
     })
     .catch((error) => {
       console.error('Error', error);
