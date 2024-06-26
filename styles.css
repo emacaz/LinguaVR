@@ -282,6 +282,7 @@ footer {
 
   .form {
     margin: 2rem auto;
+    padding-bottom: 80px;
   }
 
   .form form {
@@ -296,6 +297,13 @@ footer {
   form {
     display: flex;
     position: relative;
+  }
+
+  .g-recaptcha {
+    /* display: none; */
+    position: absolute;
+    top: 50px;
+    left: 70px;
   }
 
   .form input[type="email"] {
@@ -316,7 +324,7 @@ footer {
 
   form .form-text {
     position: absolute;
-    top: -20px;
+    top: -35px;
     left: 72px;
     width: 326px;
     font-size: 14px !important;
