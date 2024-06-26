@@ -50,7 +50,6 @@ document.getElementById("form_id").addEventListener("submit", function(event) {
     const submitBtn = document.getElementById('submitBtn');
     const responseMessage = document.getElementById("responseMessage");
     
-    console.log(token);
     submitBtn.textContent = "Enviando...";
     document.querySelector("input[name='email']").disabled = true;
 
