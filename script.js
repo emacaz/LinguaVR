@@ -70,6 +70,8 @@ document.getElementById("form_id").addEventListener("submit", function(event) {
     // Aquí puedes agregar el código para enviar el formulario a tu servidor
     // Si el envío del formulario es exitoso, muestra el mensaje de confirmación
     const email = document.querySelector("input[name='email']").value.toLowerCase().replace(/\s/g, '');
+    const API = 'https://5zgbdl1m7g.execute-api.sa-east-1.amazonaws.com/save_email';
+    
     console.log(email);
     console.log("Correo enviado...");
     document.getElementById("confirmationModal").style.display = "block";
@@ -80,6 +82,22 @@ document.getElementById("form_id").addEventListener("submit", function(event) {
     submitBtn.disabled = true;
     submitBtn.style.cursor = 'not-allowed';
     submitBtn.style.backgroundColor = '#ccc';
+
+    fetch(API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Sucess1:', data);
+      alert(data);
+    })
+    .catch((error) => {
+      console.error('Error', error);
+    });
 });
 
 document.getElementById("closeModal").onclick = function() {
