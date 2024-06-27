@@ -66,7 +66,7 @@ document.getElementById("form_id").addEventListener("submit", function(event) {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       responseMessage.textContent = data.body;
       document.getElementById("confirmationModal").style.display = "block";
       submitBtn.textContent = "Enviar";
