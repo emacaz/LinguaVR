@@ -57,6 +57,17 @@ document.getElementById("form_id").addEventListener("submit", function(event) {
     submitBtn.style.cursor = 'not-allowed';
     submitBtn.style.backgroundColor = '#ccc';
 
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      responseMessage.textContent = "Ingresa un correo electrónico válido.";
+      document.getElementById("confirmationModal").style.display = "block";
+      grecaptcha.reset();
+      submitBtn.textContent = "Enviar";
+      document.querySelector("input[name='email']").disabled = false;
+      return;
+    }
+
     fetch(API, {
       method: 'POST',
       headers: {
