@@ -103,3 +103,50 @@ window.onclick = function(event) {
         document.getElementById("confirmationModal").style.display = "none";
     }
 };
+
+// Solara
+$(document).mousemove(function(event) {
+  var eyes = $(".eye");
+  eyes.each(function() {
+    var eye = $(this);
+    var x = (eye.offset().left) + (eye.width() / 2);
+    var y = (eye.offset().top) + (eye.height() / 2);
+    var rad = Math.atan2(event.pageX - x, event.pageY - y);
+    var rot = (rad * (180 / Math.PI) * -1) + 180;
+    eye.css({
+      '-webkit-transform': 'rotate(' + rot + 'deg)',
+      '-moz-transform': 'rotate(' + rot + 'deg)',
+      '-ms-transform': 'rotate(' + rot + 'deg)',
+      'transform': 'rotate(' + rot + 'deg)'
+    });
+  });
+});
+
+// Verificar soporte de sensores
+if (window.DeviceOrientationEvent) {
+  window.addEventListener('deviceorientation', handleOrientation, false);
+} else {
+  console.log('El dispositivo no soporta sensores de orientación.');
+}
+
+// Función para manejar cambios de orientación
+function handleOrientation(event) {
+  var eyes = $(".eye");
+  eyes.each(function() {
+    var eye = $(this);
+    var x = (eye.offset().left) + (eye.width() / 2);
+    var y = (eye.offset().top) + (eye.height() / 2);
+
+    // Calcular la rotación basada en la orientación del dispositivo
+    var rotX = event.beta;   // Rotación alrededor del eje X (inclinación hacia adelante/atrás)
+    var rotY = event.gamma;  // Rotación alrededor del eje Y (inclinación hacia izquierda/derecha)
+
+    // Aplicar la rotación de los ojos basada en la orientación del dispositivo
+    eye.css({
+      '-webkit-transform': 'rotateY(' + rotY + 'deg) rotateX(' + (-rotX) + 'deg)',
+      '-moz-transform': 'rotateY(' + rotY + 'deg) rotateX(' + (-rotX) + 'deg)',
+      '-ms-transform': 'rotateY(' + rotY + 'deg) rotateX(' + (-rotX) + 'deg)',
+      'transform': 'rotateY(' + rotY + 'deg) rotateX(' + (-rotX) + 'deg)'
+    });
+  });
+}
