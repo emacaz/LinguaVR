@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <p>${item.notas}</p>
                     </div>
                 `;
+
                 
                 container.appendChild(section);
             });

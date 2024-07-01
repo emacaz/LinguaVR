@@ -1,11 +1,18 @@
 [
-    {
-        "version": "1.0.0",
-        "fecha": "Junio, 2024",
-        "descripcion": "Solara acaba de nacer 👶🏻. Es muy sencilla y solamente puede reaccionar la mirada de sus ojos al movimiento del puntero en una página web.",
-        "imagen": "images/version-1-0-0.png",
-        "video": "https://www.youtube.com/embed/Z2ZPsnrO5Bg",
-        "notas": "Nota: Esta versión básica muestra el seguimiento del mouse."
-    }
-    
+  {
+    "version": "1.0.0",
+    "fecha": "Junio, 2024",
+    "descripcion": "Solara acaba de nacer 👶🏻. Es muy sencilla y solamente puede reaccionar la mirada de sus ojos al movimiento del puntero en una página web.",
+    "imagen": "images/version-1-0-0.png",
+    "video": "https://www.youtube.com/embed/Z2ZPsnrO5Bg",
+    "notas": "Nota: Esta versión básica muestra el seguimiento del mouse."
+  },
+  {
+    "version": "1.0.1",
+    "fecha": "Desconocida",
+    "descripcion": "Actualmente la versión 1.0.1 está siendo desarrollada...",
+    "imagen": "images/solara-1-0-1.jpg",
+    "video": "https://www.youtube.com/embed/czbLhP_V11w",
+    "notas": "Nota: Versión en desarrollo </>."
+  }
 ]
