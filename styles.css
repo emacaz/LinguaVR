@@ -127,7 +127,7 @@ header {
   top: -60px;
   left: 60%;
   transform: translateX(-50%);
-  width: 220px;
+  width: 160px;
 }
 
 .speech-bubble {
@@ -398,7 +398,7 @@ footer {
   }
 
   .greeting {
-    width: 270px;
+    width: 190px;
   }
 
   .speech-bubble p {
