@@ -50,7 +50,8 @@ header {
 }
 
 .solara {
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
+  margin: 2rem auto 0 auto;
   position: relative;
   width: 100px;
   height: 100px;
@@ -159,6 +160,15 @@ header {
   color: var(--dark-color);
 }
 
+.next_version {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.next_version a {
+  color: var(--dark-color);
+  text-decoration: underline;
+}
 
 
 .hero .video {
@@ -207,6 +217,10 @@ header {
   text-align: left;
   margin-bottom: 8px;
   line-height: 1.4;
+}
+.form-description a {
+  color: var(--dark-color);
+  text-decoration: underline;
 }
 
 .form form {
